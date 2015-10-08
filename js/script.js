@@ -28,6 +28,8 @@ function createGrid(size)
 	};
 	function colorBoxes()
 	{
+		
+
 		$('.box').hover(
 		function(){
 			$(this).css('background-color','red');
@@ -35,6 +37,7 @@ function createGrid(size)
 		function(){
 			$(this).css('background-color','green');
 			});
+		
 	};
 
 function resetGrid()
@@ -65,8 +68,15 @@ function randomColorGrid()
 function shadeColor()
 {
 	resetGrid();
-	$('.box').css('background-color','black')
+	$('.box').css({'background-color':'black',
+			 	   'border-color':'white'});
+	
+	/*
+$('.box').css('background-color','black')
 			 .css('border-color','white');
+
+*/
+
 	$('.box').hover(function()
 	{
 		var opacityColor = $(this).css('opacity');
@@ -79,8 +89,12 @@ function shadeColor()
 function trailColors()
 {
 	resetGrid();
+	$('.box').css({'background-color':'black',
+			 	   'border-color':'white'});
+		/*
 	$('.box').css('background-color','white')
 			 .css('background-color','black');
+	*/
 	$('.box').mouseenter(function()
 	{
 		$(this).fadeTo('fast',0);
@@ -115,6 +129,7 @@ $('#shade').on('click',function()
 	{
 		shadeColor();
 	});
+
 $('#trail').on('click',function()
 	{
 		trailColors();
