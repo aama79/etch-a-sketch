@@ -28,10 +28,10 @@ h1
 .grid 
 {
   border: 1px solid black;
-  width:500px;
-  height:500px;
+  width: 400px;
+  height: 400px;
   padding:0;
-  margin: 20px 410px 20px;
+  margin: 20px auto;
   
 }
 .menu
